@@ -1,5 +1,5 @@
 /*
- * @Author: lxk0301 
+ * @Author: lxk0301
  * @Date: 2020-11-03 18:12:38
  * @Last Modified by: lxk0301
  * @Last Modified time: 2020-10-30 20:37:24
@@ -18,12 +18,12 @@
 QuantumultX
 [task_local]
 #京东全民开红包
-1 1 * * * https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true
+1 1 * * * https://raw.githubusercontent.com/Storm4542/jd_scripts/master/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true
 Loon
 [Script]
-cron "1 1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js, tag=京东全民开红包
+cron "1 1 * * *" script-path=https://raw.githubusercontent.com/Storm4542/jd_scripts/master/jd_redPacket.js, tag=京东全民开红包
 Surge
-京东全民开红包 = type=cron,cronexp=1 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js
+京东全民开红包 = type=cron,cronexp=1 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Storm4542/jd_scripts/master/jd_redPacket.js
  */
 const $ = new Env('京东全民开红包');
 const notify = $.isNode() ? require('./sendNotify') : '';
