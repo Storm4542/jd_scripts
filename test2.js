@@ -20,99 +20,106 @@ const jdFactory = ['P04z54XCjVWnYaS5m9cZ2au2ioclYcl6-sKyQ0', 'P04z54XCjVWnYaS5m9
 const jxFactory = ['j0TLAjroou5W19YWExJgLA==', '0eyZM20kWXPj3KVmJlYgdg==', 'noghBKlnMTX7okfP799QFw==', 'ODJzUDFUJEW8hRhput3uUg=='];
 const zz = ['AUWE5mfuXm2MIC2P-jn5JlA', 'AUWE5mf_Gz2cOC2f-3H5KxA', 'ATGETy9P1kWNZTwCSvSs', 'ATGEA1-zCiUN_TQC7gTw'];
 
-
-for (let i = 0; i < zz.length; i++) {
-    let url = 'https://code.chiang.fun/api/v1/jd/jdzz/create/' + zz[i]
-    $.get(url, (err, res, data) => {
-        if (err) {
-            console.log('zz失败');
-        } else {
-            if (data) {
-                console.log('zz成功');
+!(async () => {
+    for (let i = 0; i < zz.length; i++) {
+        let url = 'https://code.chiang.fun/api/v1/jd/jdzz/create/' + zz[i]
+        $.get(url, (err, res, data) => {
+            if (err) {
+                $.log('zz失败');
+            } else {
+                if (data) {
+                    $.log('zz成功');
+                }
             }
-        }
-    })
+        })
 
-}
+    }
 
-for (let i = 0; i < bean.length; i++) {
-    let url = 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/' + jxFactory[i]
-    $.get({
-        url: url
-    }, (err, res, data) => {
-        if (err) {
-            console.log('京喜工厂失败');
-        } else {
-            if (data) {
-                console.log('京喜工厂成功');
+    for (let i = 0; i < bean.length; i++) {
+        let url = 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/' + jxFactory[i]
+        $.get({
+            url: url
+        }, (err, res, data) => {
+            if (err) {
+                $.log('京喜工厂失败');
+            } else {
+                if (data) {
+                    $.log('京喜工厂成功');
+                }
             }
-        }
-    })
+        })
 
-}
+    }
 
-for (let i = 0; i < bean.length; i++) {
-    let url = 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/' + jdFactory[i]
-    get({
-        url: url
-    }, (err, res, data) => {
-        if (err) {
-            console.log('东东工厂失败');
-        } else {
-            if (data) {
-                console.log('东东工厂成功');
+    for (let i = 0; i < bean.length; i++) {
+        let url = 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/' + jdFactory[i]
+        get({
+            url: url
+        }, (err, res, data) => {
+            if (err) {
+                $.log('东东工厂失败');
+            } else {
+                if (data) {
+                    $.log('东东工厂成功');
+                }
             }
-        }
-    })
+        })
 
-}
-for (let i = 0; i < bean.length; i++) {
-    let url = 'http://api.turinglabs.net/api/v1/jd/farm/create/' + farm[i]
-    $.get({
-        url: url
-    }, (err, res, data) => {
-        if (err) {
-            console.log('农场失败');
-        } else {
-            if (data) {
-                console.log('农场成功');
+    }
+    for (let i = 0; i < bean.length; i++) {
+        let url = 'http://api.turinglabs.net/api/v1/jd/farm/create/' + farm[i]
+        $.get({
+            url: url
+        }, (err, res, data) => {
+            if (err) {
+                $.log('农场失败');
+            } else {
+                if (data) {
+                    $.log('农场成功');
+                }
             }
-        }
-    })
+        })
 
-}
+    }
 
-for (let i = 0; i < bean.length; i++) {
-    let url = 'http://api.turinglabs.net/api/v1/jd/pet/create/' + pet[i]
-    $.get({
-        url: url
-    }, (err, res, data) => {
-        if (err) {
-            console.log('萌宠失败');
-        } else {
-            if (data) {
-                console.log('萌宠成功');
+    for (let i = 0; i < bean.length; i++) {
+        let url = 'http://api.turinglabs.net/api/v1/jd/pet/create/' + pet[i]
+        $.get({
+            url: url
+        }, (err, res, data) => {
+            if (err) {
+                $.log('萌宠失败');
+            } else {
+                if (data) {
+                    $.log('萌宠成功');
+                }
             }
-        }
-    })
+        })
 
-}
+    }
 
-for (let i = 0; i < bean.length; i++) {
-    let url = 'http://api.turinglabs.net/api/v1/jd/bean/create/' + bean[i]
-    $.get({
-        url: url
-    }, (err, res, data) => {
-        if (err) {
-            console.log('种豆得豆失败');
-        } else {
-            if (data) {
-                console.log('种豆得成功');
+    for (let i = 0; i < bean.length; i++) {
+        let url = 'http://api.turinglabs.net/api/v1/jd/bean/create/' + bean[i]
+        $.get({
+            url: url
+        }, (err, res, data) => {
+            if (err) {
+                $.log('种豆得豆失败');
+            } else {
+                if (data) {
+                    $.log('种豆得成功');
+                }
             }
-        }
-    })
+        })
 
-}
+    }
+
+})().catch((e) => {
+    $.log('失败')
+}).finally(() => {
+    $.done();
+})
+
 
 
 function Env(t, e) {
