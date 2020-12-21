@@ -23,12 +23,14 @@ const zz = ['AUWE5mfuXm2MIC2P-jn5JlA', 'AUWE5mf_Gz2cOC2f-3H5KxA', 'ATGETy9P1kWNZ
 
 for (let i = 0; i < zz.length; i++) {
     let url = 'https://code.chiang.fun/api/v1/jd/jdzz/create/' + zz[i]
-    https.get(url, res => {
-        res.on('data', (d) => {
-            console.log(`赚赚${i}请求成功`)
-        });
-    }).on('error', e => {
-        console.log(`赚赚${i}请求失败`)
+    $.get(url, (err, res, data) => {
+        if (err) {
+            console.log('zz失败');
+        } else {
+            if (data) {
+                console.log('zz成功');
+            }
+        }
     })
 
 }
